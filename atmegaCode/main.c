@@ -13,6 +13,8 @@
 
 #include <avr/io.h>				// this is always included in AVR programs
 #include <util/delay.h>			// add this to use the delay function
+#include <avr/pgmspace.h> 
+#include <avr/interrupt.h> 
 
 void SPI_init()
 {
@@ -131,6 +133,44 @@ void invertLEDState(){
 	PORTC ^= (1 << PC0);	// LED ON
 }
 
+void initRotary(){
+
+DDRD &=~ (1 << PD3);				/* PD2 and PD3 as input */ 
+  DDRD &=~ (1 << PD4);        
+  PORTD |= (1 << PD3)|(1 << PD4);   /* PD2 and PD3 pull-up enabled   */ 
+
+  GICR |= (1<<INT0)|(1<<INT1);		/* enable INT0 and INT1 */ 
+  MCUCR |= (1<<ISC01)|(1<<ISC11)|(1<<ISC10); /* INT0 - falling edge, INT1 - reising edge */ 
+
+}
+
+uint16_t rotaryValue=0;
+
+ISR(INT10_vect ) 
+{ 
+	if(!bit_is_clear(PIND, PD3)) 
+	{ 
+		rotaryValue++; 
+	} 
+	else 
+	{ 
+		rotaryValue--; 
+	} 
+} 
+
+//INT1 interrupt 
+ISR(INT1_vect ) 
+{ 
+	if(!bit_is_clear(PIND, PD4)) 
+	{ 
+		rotaryValue++; 
+	} 
+	else 
+	{ 
+		rotaryValue--;
+	} 
+} 
+
 int main(void) {
 	
 	DDRC |= (1 << PC0);			// set Port C pin PC0 for output
@@ -139,7 +179,9 @@ int main(void) {
 	uint16_t outputValue=200*5;//4095 max
 	uint16_t outputValue2=0x07FF;//4095 max
 	uint16_t readCurrent =0;
-	
+	initRotary();
+	sei(); 
+
 	initINA219();
 	_delay_ms(10);
 	
