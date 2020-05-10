@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name 25v-PSU-rescue)(type Legacy)(uri "${KIPRJMOD}/25v PSU-rescue.lib")(options "")(descr ""))
+)
