@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:25v PSU-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -546,12 +545,10 @@ Wire Wire Line
 	4900 1400 4900 2000
 Wire Wire Line
 	5700 1400 4900 1400
-Connection ~ 5700 1700
 Wire Wire Line
 	5700 1400 5700 1700
 Wire Wire Line
 	5950 1400 5700 1400
-Connection ~ 6100 1700
 Wire Wire Line
 	6150 1700 6100 1700
 Wire Wire Line
@@ -822,8 +819,6 @@ F 3 "~" H 6150 1100 50  0001 C CNN
 	1    6150 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5700 1700 6100 1700
 $Comp
 L Transistor_BJT:TIP3055G Q1
 U 1 1 5E8D5C75
@@ -1063,7 +1058,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/ina219.pdf" H 10600 5700 50  0001 C CNN
 $EndComp
 Text GLabel 2950 3800 3    50   Output ~ 0
 Sense+
-Text GLabel 3450 3850 3    50   Output ~ 0
+Text GLabel 3450 3800 3    50   Output ~ 0
 Sense-
 Text GLabel 9850 5700 0    50   Input ~ 0
 Sense+
@@ -1996,7 +1991,7 @@ SS1
 Text GLabel 2050 4400 2    50   Output ~ 0
 SS0
 $Comp
-L MCU_Microchip_ATmega:ATmega328P-AU U8
+L 25v-PSU-rescue:ATmega328P-AU-MCU_Microchip_ATmega U8
 U 1 1 5F71BC6F
 P 1450 5400
 F 0 "U8" H 1200 4450 50  0000 C CNN
