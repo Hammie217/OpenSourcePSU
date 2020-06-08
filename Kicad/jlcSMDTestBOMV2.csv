@@ -1,0 +1,51 @@
+﻿Comment,Designator,Footprint
+10u,C(Tantalum)1 ,1206_C
+100n,C12 C10 C17 C16 ,0603_C
+1u,C3 C14 ,0603_C
+22p,C5 C4 ,0603_C
+4700uF,C6 C7 C13 ,Capacitor_THT:CP_Radial_D16.0mm_P7.50mm
+2.2u,C8 ,0603_C
+470uF,C9 C11 ,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm
+0.1u,C?(Ceramic)1 C15 C2 C1 ,0603_C
+LED,D1 D2 ,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+D,D3 D10 D5 D6 D7 D4 D8 ,Diode_SMD:D_SOD-123F
+D_Zener,D9 ,Diode_SMD:D_MiniMELF_Handsoldering
+Live,H1 ,MountingHole:MountingHole_2.5mm_Pad
+Neutral,H2 ,MountingHole:MountingHole_2.5mm_Pad
+Out+,H3 ,MountingHole:MountingHole_4mm_Pad
+Out-,H4 ,MountingHole:MountingHole_4mm_Pad
+Conn_01x10_Female,J1 ,Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical
+Barrel_Jack,J2 ,Connector_BarrelJack:BarrelJack_Horizontal
+Conn_02x03_Odd_Even,J3 ,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical
+G5V-1,K1 ,Relay_THT:Relay_SPDT_Omron_G5V-1
+TIP3055G,Q4 Q3 ,Package_TO_SOT_THT:TO-247-3_Vertical
+MMBT3904,Q5 Q2 Q1 ,Package_TO_SOT_SMD:SOT-23_Handsoldering
+330,R1 R2 R3 R5 R6 R32 ,0603_R
+680,R17 ,0603_R
+3k,R18 ,0603_R
+100,R19 ,0603_R
+10k,R22 R27 R4 ,0603_R
+220R,R23 R21 ,0603_R
+100R,R24 ,0603_R
+180k,R26 R28 ,0603_R
+10kR,R29 R25 ,0603_R
+27k,R30 R20 ,0603_R
+68k,R31 ,0603_R
+100k,R33 ,0603_R
+4.7k,R34 R35 ,0603_R
+1,R9 R10 R11 R12 R13 R14 R15 R16 R7 R8 ,0603_R
+Rotary_Encoder,SW1 SW2 ,Rotary_Encoder:RotaryEncoder_Alps_EC12E_Vertical_H20mm
+SW_Mains,SW3 ,TerminalBlock:TerminalBlock_bornier-2_P5.08mm
+Transformer_1P_1S,T1 ,Transformer_THT:Transformer_Toroid_Horizontal_D18.0mm
+ATmega328P-AU,U1 ,Package_QFP:TQFP-32_7x7mm_P0.8mm
+MC78M05_TO252,U10 ,Package_TO_SOT_SMD:TO-252-2
+INA219AxD,U11 ,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+MCP4922,U12 ,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm
+LM358,U2 U3 ,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+LT3080xST,U4 ,Package_TO_SOT_SMD:SOT-223
+LM334Z,U5 ,Package_TO_SOT_THT:TO-92_Inline
+L78L33_SOT89,U6 ,Package_TO_SOT_SMD:SOT-89-3_Handsoldering
+LM336,U7 ,Package_TO_SOT_THT:TO-92_Inline
+REF3020,U8 ,Package_TO_SOT_SMD:SOT-23_Handsoldering
+MAX4080T,U9 ,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+20MHz Crystal,Y1 ,Crystal:Crystal_HC52-8mm_Vertical
